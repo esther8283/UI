@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ui2</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Castoro&family=Lora&family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Lora', serif;
+            font-family: 'Noto Serif KR', serif;
+        }
+        
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: rgb(154, 175, 216);
+            /* 컨텐츠 테두리 사이 공간 */
+            padding: 20px;
+        }
+
+        header h1 { 
+            color : white;
+            margin: 0;
+        }
+
+        /* display : block 인 태그에 width의 크기를 지정하고 
+        margin 값 중 left, right를 auto로 주면 중앙 정렬됨  */
+        section {
+            width: 960px;
+            margin: 0 auto; /* 공식 */
+        }
+        
+        article {
+            margin: 10px;
+        }
+
+        /* 이미지를 넣기 위한 공가 */
+        .box-img {
+            float: left;
+            width: 33%;
+        }
+        /* 부모태그의 크기만큼 이미지의 크기를 설정하기 위함 */
+        .box-img img {width: 100%;}
+
+        /* 텍스트를 입력하기 위한 공간 */
+        .box-text {
+            float: left;
+            width: 67%;
+            padding: 15px;
+        }
+
+        article::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>제목부분</h1>
+    </header>
+
+    <main>
+        <!-- section도 기본적으로 div라 블록타입 -->
+        <section>
+            <article>
+                <div class="box-img">
+                    <img src="./img/img_vernazza.jpg" alt="">
+                </div>
+                <div class="box-text">
+                    <h2>veranzza</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                </div>
+
+                <div class="box-img">
+                    <img src="./img/img_riomaggiore.jpg" alt="">
+                </div>
+                <div class="box-text">
+                    <h2>rimaggiore</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+                </div>
+            </article>
+        </section>
+    </main>
+
+</body>
+</html>

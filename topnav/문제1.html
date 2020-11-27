@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>topnav</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family:'Noto Serif KR', serif;
+        }
+       
+        body {
+            margin: 0;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0px;
+            overflow: hidden;
+            background-color: #333333;
+        }
+        nav li {
+            float: left;
+        }
+        nav li a {
+            display: inline-block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 15px;
+            text-decoration: none;
+        }
+        nav li a:hover {
+            background-color: #dddddd;
+            color: black;
+        }
+        nav::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    
+        main {
+            background-color: #dddddd;
+            height: 300px;
+        }
+        aside, section {
+            float: left;
+            width: 33.33%;
+            padding: 10px;
+            height: 300px;
+        }
+        aside p:hover{ color : white}
+        section p:hover{ color : white}
+
+        aside::after, section::after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .box1 { background-color: #c4c1c1;}
+        .box2 { background-color: #b3b0b0;}
+        .box3 { background-color: #9e9c9c;}
+
+        @media (max-width: 576px) {
+            aside{width: 100%;}
+            section {width: 100%;}
+        }
+
+        footer {
+            background-color: #f1f1f1;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">link1</a></li>
+                <li><a href="#">링크2</a></li>
+                <li><a href="#">link3</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+       <aside class="box1"><p>왼쪽 사이드 영역</p></aside>
+       <section class="box2"><p>메인 영역</p></section>
+       <aside class="box3"><p>오른쪽 사이드 영역</p></aside>
+    </main>
+
+    <footer>
+        <p>Footer</p>
+    </footer>
+</body>
+</html>

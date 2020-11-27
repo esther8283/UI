@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>side by side2</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+                    
+        html,body {
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: rgb(74, 153, 149);
+            padding: 20px;
+            
+        }
+        header h1 { 
+            color: white;
+            margin: 0px;}
+
+        .box {
+            margin: 0px auto;
+            width: 960px;
+        }
+
+        .box-m {
+            height: 280px;
+        }
+
+        .box-img {
+            float: left;
+            padding: 10px;
+        }
+        
+        .box-m::after{
+            content: "";
+            display: none;
+            clear: both;
+        }
+        .box-txt {
+            display: inline-block;
+            padding: 10px;
+            width: 500px;
+            height: 250px;
+        }
+      </style>
+</head>
+<header>
+    <h1>Summer Holiday</h1>
+</header>
+<body>
+    <div class="box">
+        <div class="box-m">
+            <div class="box-img">
+                <img src="./img/img_manarola.jpg" alt="" >
+            </div>
+            <div class="box-txt">
+                <h3>Terre</h3>
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+            </div>
+        </div>    
+
+            <div class="box-m">
+                <div class="box-img">
+                    <img src="./img/img_riomaggiore.jpg" alt="" >
+                </div>
+                <div class="box-txt">
+                    <h3>Terre</h3>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                </div>
+            </div>
+
+                <div class="box-m">
+                    <div class="box-img">
+                        <img src="./img/img_5terre.jpg" alt="" >
+                    </div>
+                    <div class="box-txt">
+                        <h3>Terre</h3>
+                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                    </div>
+                </div>
+
+                <div class="box-m">
+                    <div class="box-img">
+                        <img src="./img/img_riomaggiore.jpg" alt="" >
+                    </div>
+                    <div class="box-txt">
+                        <h3>Terre</h3>
+                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                    </div>
+                </div>
+
+                <div class="box-m">
+                    <div class="box-img">
+                        <img src="./img/img_vernazza.jpg" alt="" >
+                    </div>
+                    <div class="box-txt">
+                        <h3>Terre</h3>
+                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                    </div>
+                </div>
+
+                <div class="box-m">
+                    <div class="box-img">
+                        <img src="./img/img_manarola.jpg" alt="" >
+                    </div>
+                    <div class="box-txt">
+                        <h3>Terre</h3>
+                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                    </div>
+                </div>
+    </div>
+</body>
+</html>
