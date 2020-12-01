@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+aside {
+    float: left;
+    width: 20%;
+    height: 500px;
+    /* border: 1px solid black; */
+}
+
+aside img {
+    width: 80%;
+    padding: 5px 10px 5px 5px;
+}
+.left-img:hover {
+    background-color: lightgray;
+}
+header {
+    float: left;
+    width: 80%;
+    height: 250px;
+    background-color: #009688;
+    padding: 50px;
+    margin-bottom: 20px;
+}
+body::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+header h1 {
+    font-weight: normal;
+    font-size: 45px;
+    color: white;
+    text-align: center;
+    margin-top: 35px;
+}
+.left-icon {
+    font-size: 25px;
+    color: white;
+    background-color: black;
+    float: left;
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+.left-icon i {
+    padding: 10px 35px;
+    list-style-type: none;
+}
+.left-icon i:hover {
+    background-color: lightgray;
+    color: black;
+}
+
+.left-list ul{
+    border-top: 1px solid lightgray;
+    list-style-type: none;
+}
+.left-list li a {
+    padding: 15px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.left-list li a:hover {
+    background-color: lightgray;
+}
+section {
+    float: left;
+    width: 80%;
+}
+main::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+div.box1 {
+    width: 100%;
+    background-color: rgb(243, 240, 240);
+    padding: 5px 20px;
+    margin-bottom: 10px;
+}
+.box1 h1 {
+    font-weight: normal;
+    font-size: 50px;
+    margin: 20px 0;
+}
+.box1 h3 {
+    font-weight: normal;
+    font-size: 20px;
+    margin: 0 10px 0 0; 
+}
+.box1 button {
+    border: none;
+    background-color: #009688;
+    padding: 10px 15px;
+    margin: 15px 0;
+    color: white;
+    cursor: pointer;
+}
+.box1 p {
+    background-color: white;
+    padding: 10px;
+    border-left: 4px solid  #4CAF50;
+}
+.box2 {
+    background-color: rgb(243, 240, 240);
+    padding: 30px;
+}
+.box2 a {
+    color:gray;
+    font-size: 15px;
+}

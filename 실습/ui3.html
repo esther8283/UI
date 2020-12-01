@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습 1</title>
+<!-- 예제 사이트 -->
+<!-- https://www.w3schools.com/w3css/tryw3css_examples_pricing_tables.htm -->
+
+  <style>
+      * {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+      }
+
+      header h1 { 
+          font-weight: normal; /* 텍스트의 굵기 조절 */
+          margin: 0;
+          padding: 15px;
+      }
+
+      .box1, .box2, .box3 {
+          float: left;
+          border: 1px solid lightgray;
+          width: 30%;
+          height: 100%;
+          margin: 0 10px;
+      }
+
+      article::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+       
+        .box1:hover, .box2:hover, .box3:hover { 
+            box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+            /* box-shadow: 밑 가로 흐려짐정도 색상(0,0,0,0.5(약간 흐릿하게)); */
+        }
+        
+    
+      .box1_1 {
+            margin: 0;
+            background-color: black;
+            height: 100px;
+            color: white;
+            text-align: center;
+            font-size: 24px;
+            padding: 32px 16px;
+      }
+      .box1_2 {
+          border-bottom: 1px solid lightgray;
+          padding: 16px;
+          text-align: center;
+      }
+      .box1_3 {
+          border-bottom: 1px solid lightgray;
+          padding: 25px;
+          text-align: center;
+      }
+      .box1_4 {
+          padding: 33px 16px;
+          text-align: center;
+          background-color: rgb(238, 235, 235);
+      }
+      .box1_4 > button {
+          font-size: 15px;
+          background-color: #4CAF50;
+          color: white;
+          border: 0; /* border: none; 도 가능*/
+          padding: 12px 24px;
+      }
+      .box1_4 > button:hover {
+          cursor: pointer; /* cusor : 마우스 포인트 속성 */
+          background-color:rgb(156, 155, 155);
+          color: black;
+      }
+      .box2_1 {
+            margin: 0;
+            background-color: #4CAF50;
+            height: 100px;
+            color: white;
+            text-align: center;
+            font-size: 24px;
+            padding: 32px 16px;
+      }
+  </style>
+</head>
+<body>
+    <header>
+        <h1>Responsive Pricing Talbes</h1>
+    </header>
+    
+    <main>
+        <section>
+            <article>
+                <div class="box1">
+                       <div class="box1_1">Basic</div>
+                       <div class="box1_2"><b>10GB</b> Storage</div>
+                       <div class="box1_2"><b>10</b> Emails</div>
+                       <div class="box1_2"><b>10</b> Domains</div>
+                       <div class="box1_2"><b>Endless</b> Support</div>
+                       <div class="box1_3"><b style="font-size: 30px;">$10</b><br><p style="color: gray; margin: 0;">per month</p></div>
+                       <div class="box1_4"><button>Sign Up</button></div>
+                </div>
+
+                <div class="box2">
+                    <div class="box2_1">Pro</div>
+                       <div class="box1_2"><b>25GB</b> Storage</div>
+                       <div class="box1_2"><b>25</b> Emails</div>
+                       <div class="box1_2"><b>25</b> Domains</div>
+                       <div class="box1_2"><b>Endless</b> Support</div>
+                       <div class="box1_3"><b style="font-size: 30px;">$25</b><br><p style="color: gray; margin: 0;">per month</p></div>
+                       <div class="box1_4"><button>Sign Up</button></div>
+                </div>
+
+                <div class="box3">
+                    <div class="box1_1">Premium</div>
+                    <div class="box1_2"><b>50GB</b> Storage</div>
+                    <div class="box1_2"><b>50</b> Emails</div>
+                    <div class="box1_2"><b>50</b> Domains</div>
+                    <div class="box1_2"><b>Endless</b> Support</div>
+                    <div class="box1_3"><b style="font-size: 30px;">$50</b><br><p style="color: gray; margin: 0;">per month</p></div>
+                       <div class="box1_4"><button>Sign Up</button></div>
+                </div>
+            </article>
+        </section>
+    </main>
+
+</body>
+</html>

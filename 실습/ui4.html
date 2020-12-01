@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습 2</title>
+    <!-- 예제 사이트 -->
+    <!-- https://www.w3schools.com/w3css/tryw3css_examples_contact.htm  -->
+
+
+    <!-- icon 사용하기 위해서 font awesome 로드 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        form {
+            text-align: center;
+        }
+        form > div {
+            box-shadow: 0 0 10 rgb(0,0,0,0.5);
+            margin: 10px;
+            padding: 20px;
+            background-color: lightgrey;
+        }
+        .line-icon {
+            color: #2196F3;
+            float: left;
+            font-size: 32px;
+            padding: 10px;
+        }
+        .line .line-icon {
+            width: 50px;
+        }
+        .line-input {
+            overflow: hidden;
+            width: 96%;
+        }
+        .line-input input {
+            font-size: 15px;
+            width: 100%;
+            padding : 8px;
+            display: block;
+        }
+        line::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        h2 {
+            color: #2196F3;
+            /* font-weignth는 속성은 100~900까지, 기본값 normal 40 */
+            font-weight: 400;
+        }
+        .btn button { 
+            margin: 5px;
+            color: white;
+            background-color: #2196F3;
+            font-size: 1.3em;
+            width: 100px;
+            height: 50px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <div>
+            <div>
+                <h2>Contact Us</h2></div>
+
+                <!-- input 태그와 icon을 사용하기 위한 div -->
+            <div class="line">
+                <!-- icon을 사용하기 위한 div, 다른 아이콘을 동일한 너비를 가지도록 하기 위해서 크기를 고정 -->
+                <div class="line-icon">
+                    <i class="fa fa-user-o"></i>
+                </div>
+                <!-- 사용자 입력을 받는 inpu 태그를 감싸는 div, 하나의 라인 전체를 사용하는 input 태그를 만들기 위한 div -->
+                <div class="line-input">
+                    <!-- input의 display숙성을 block 변경, width: 100%로 설정 -->
+                    <input name="First" type="text" placeholder=" First Name">
+                </div>
+            </div>
+
+            <div class="line">
+                <div class="line-icon">
+                    <i class="fa fa-user-o"></i>
+                </div>
+                <div class="line-input">
+                    <input name="First" type="text" placeholder=" First Name">
+                </div>
+            </div>
+
+            <div class="line">
+                <div class="line-icon">
+                    <i class="fa fa-user-o"></i>
+                </div>
+                <div class="line-input">
+                    <input name="First" type="text" placeholder=" First Name">
+                </div>
+            </div>
+
+            <div class="line">
+                <div class="line-icon">
+                    <i class="fa fa-user-o"></i>
+                </div>
+                <div class="line-input">
+                    <input name="First" type="text" placeholder=" First Name">
+                </div>
+            </div>
+
+            <div class="line">
+                <div class="line-icon">
+                    <i class="fa fa-user-o"></i>
+                </div>
+                <div class="line-input">
+                    <input name="First" type="text" placeholder=" First Name">
+                </div>
+            </div>
+
+            <div class="btn">
+                <button>Send</button>
+            </div>
+        </div>
+    </form>
+</body>
+                
+
+</body>
+</html>

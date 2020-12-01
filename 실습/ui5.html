@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습 3</title>
+    <!-- 예제 사이트 -->
+    <!-- https://www.w3schools.com/w3css/tryw3css_examples_chardonney.htm -->
+
+    <!-- 아이콘 사용 링크 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- 스타일 시트 로드 -->
+    <!-- <link rel="stylesheet" href="./css/style.css"> -->
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: teal;
+            /* 아래의 main부분과 거리를 두기 위한 공간 */
+            margin-bottom: 15px;
+            padding: 15px;
+        }
+        header h1 {
+            color: white;
+            /* font-weight : bold-700하고 동일, nomarl-400하고 동일 */
+            font-weight: normal;
+            font-size: 35px;
+        }
+        header .left {
+            float: left;
+        }
+        header .right {
+            float: right;
+            text-align: right;
+        }
+        /* font-awsome의 클래스를 가지고 와서 자신의 스타일에 맞게 변경 */
+        .fa {
+            color: white;
+            font-size: 36px;
+            margin-top: 20px;
+            text-decoration: none;
+        }
+        header::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        main { 
+            /* 좌우측에 10px씩 공간 확보 */
+            padding: 0 10px;
+        }
+        article {
+            float: left;
+            width: 70%;
+            /* 왼쪽 컨텐츠 영역 중 좌우측의 공간 10px 확보 */
+            /* 왼쪽은 총 20px 확보(main 태그의 padding과 article의 padding의 결과) */
+            padding: 0 10px;
+        }
+        aside {
+            width: 30%;
+            float: left;
+            padding: 0 10px;
+        }
+        aside > * {
+            margin: 15px 0;
+        }
+        aside h2 {
+            font-size: 35px;
+            font-weight: normal;
+        }
+        /* 메인 컨텐츠 영역을 좌측, 우측 나누어 사용한 것을 제거함 */
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        /* div.box_img는 태그선택자로 태그명이 div명이 면서 클래스명이 box_img인 태그를 선택   */
+        /* 이미지크기를 최대로 사용 */
+        div.box_img, div.box_img img {width: 100%;}
+
+        div.box_table table{
+            border-collapse: separate;
+            width: 100%;
+            height: 220px;
+            padding: 10px;
+            /* table의 각각의 column의 인접 테두리선을 하나로 합하여 줌 */
+            border-collapse: collapse;
+            border-spacing: 0;
+            display: table;
+            border: 1px solid lightgray;
+        }
+        .box_table h2 {
+            padding: 10px 0;
+            /* font-weight : nomarl = 400 */
+            font-weight: normal; 
+            font-size: 30px;
+        }
+        .box_table thead th {
+            color: white;
+            text-align: left;
+            padding: 0 10px;
+            height: 45px;
+            background-color: teal;
+        }
+        .box_table tbody td {
+            padding-left: 10px;
+            border-bottom: 1px solid rgb(241, 241, 241);
+        }
+        /* 주로 nth-child() : 주로 표 사용시 짝수, 홀수별로 선택하기 위한 선택자 */
+        /* odd 홀수, even 짝수 */
+        div.box_table tr:nth-child(even) {
+            background-color: rgb(241, 241, 241);
+        }
+  
+    </style>
+</head>
+<body>
+    <header>
+        <h1>White Wines-Chardonnay</h1>
+        <!-- nav : div와 동일한 태그, 네비게이션바 및 메뉴바를 표시하는 태그 -->
+        <nav>
+            <a href="#" class="fa fa-angle-double-left left"></a>
+            <a href="#" class="fa fa-angle-double-right right"></a>
+        </nav>
+       
+    </header>
+
+    <main>
+        <section>
+
+            <article>
+                <div class="box_img">
+                    <img src="./img/img_chardonnay.jpg" alt="">
+                </div>
+                <div class="box_table">
+                    <h2>Food</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Food</th>
+                                <th>Type</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- 1번줄 -->
+                        <tr>
+                            <td>Seafood</td>
+                            <td>Shrips, Crab, Lobster</td>
+                        </tr>
+                        <!-- 2번줄 -->
+                        <tr class="event">
+                           <td>Meat</td>
+                           <td>Chicen, Por</td>
+                        </tr>
+                        <!-- 3번줄 -->
+                        <tr>
+                            <td>Cheese</td>
+                            <td>Brie, Gruyere</td>
+                        </tr>
+                        <!-- 4번줄 -->
+                        <tr class="event">
+                            <td>Other</td>
+                            <td>Cream Sauces</td>
+                        </tr>
+                        </tbody>
+                        
+                    </table>
+                </div>
+
+                <div class="box_table">
+                    <h2>Flavours</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Food</th>
+                                <th>Type</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- 1번줄 -->
+                        <tr>
+                            <td>Seafood</td>
+                            <td>Shrips, Crab, Lobster</td>
+                        </tr>
+                        <!-- 2번줄 -->
+                        <tr class="event">
+                           <td>Meat</td>
+                           <td>Chicen, Por</td>
+                        </tr>
+                        <!-- 3번줄 -->
+                        <tr>
+                            <td>Cheese</td>
+                            <td>Brie, Gruyere</td>
+                        </tr>
+                        <!-- 4번줄 -->
+                        <tr class="event">
+                            <td>Other</td>
+                            <td>Cream Sauces</td>
+                        </tr>
+                        </tbody>
+                        
+                    </table>
+                </div>
+
+                <div class="box_table">
+                    <h2>Neighbours</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Food</th>
+                                <th>Type</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- 1번줄 -->
+                        <tr>
+                            <td>Seafood</td>
+                            <td>Shrips, Crab, Lobster</td>
+                        </tr>
+                        <!-- 2번줄 -->
+                        <tr class="event">
+                           <td>Meat</td>
+                           <td>Chicen, Por</td>
+                        </tr>
+                        <!-- 3번줄 -->
+                        <tr>
+                            <td>Cheese</td>
+                            <td>Brie, Gruyere</td>
+                        </tr>
+                        </tbody>
+                        
+                    </table>
+                </div>
+            </article>
+
+            <aside>
+                <div>
+                    <h2>Chardonnay</h2>
+                    <p>Chardonnay is the world's most popular wine grape.<br><br>
+                        The taste of the Chardonnay grape is very neutral and easy to like.<br><br>
+                        Many of the Chardonnay flavors are derived from terroir and oak-aging.<br><br>
+                        The flavors varies from noticeable acidity (Cold Climates), 
+                        to crisply and mineral (Chablis, France) with flavors of green plum, apple and pear, 
+                        to heavy oak and tropical fruit flavors (the New World).<br><br>
+                        In cooler climates Chardonnay tends to be under-riped.<br><br>
+                        In warmer climates the flavors tend to vary from lemon to peach and melon.<br><br>
+                        In very warm climates Chardonnay tends to be over-riped.<br><br>
+                        Oaked Chardonnay tends to have softer acidity and more fruit flavors with added butter,
+                        cream and hazelnut notes.</p>
+                </div>
+            </aside>
+
+        </section>
+    </main>
+</body>
+</html>
