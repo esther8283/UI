@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 웹사이트</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/index1.css">
+
+    <style>
+        /* 반응형 웹 : 디바이스의 화면 크기에 따라서 여러가지 홤녀으로 변경되는 웹 사이트 구축 방식 
+                       미디어 쿼리를 사용하여 화면 크기에 따라서 css 속성을 변경시켜 여러가지 화면 크기의 사이트를 구축 */
+        /* 뷰포드(viewport) : 웹 페이지에서 사용자가 볼 수 있는 영역 
+                                - 디바이스에 따라서 뷰포트는 다르며 컴퓨터 화면보다 스마트폰의 화면이 더 작음
+                                - html5는 웹 디자이너가 meta 태그를 통해서 뷰포트를 설정할 수 있음
+                                - <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                                - width=device-width : 디바이스의 화면 너비로 현재 사이트의 너비를 설정
+                                - initial-scale=1.0 : 현재 화면의 확대/축소 수준, 1.0 현재 화면의 크기를 100% 사용함 
+        */
+
+        /* 미디어 쿼리 : 반응형 웹 사이트를 제작하는데 필수적인 속성
+                            - 지정한 화면 크기에 따라서 css속성을 다르게 사용할 수 있음
+                            - 미디어쿼리는 구형 브라우저에서는 동작하지 않을 수 있음 
+                            - 사용법
+                            @media not|only 미디어타입 and (미디어쿼리 적용 옵션) {
+                                css 코드 
+                            } 
+                            not | only : only는 지정한 css 형식대로 사용하겠다는 의미, not 지정한 css형식의 반대로 사용 
+        */
+
+        /* 미디어 타입 : all, print, screen, speech
+                            - all : 기본값, 모든 디바이스에 적용
+                            - print : 각종 프린트 디바이스
+                            - screen : 컴퓨터 모니터, 테블릿 화면, 스마트폰 화면 등 각종 디바이스 화면(all과 함께 가장 많이 사용)
+                            - speech : 문자를 읽어주는 디바이스(TTS) 
+                            - 미디어쿼리 적용 옵션 : 주로 max-width, min-width 를 사용(웹 사이트 제작은 screen, all을 주로 사용) 
+        */
+
+        /* 각 디바이스 마다의 화면 설정 크기(bootstrap 기준)
+            - extra small : 576px 미만
+            - small : 576px 까지
+            - medium : 768px 까지
+            - large : 992px 까지
+            - extra large : 1200px 까지
+        */
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>반응형 웹 사이트</h1>
+    </header>
+
+    <main>
+        <aside class="col-3 col-s-3 menu">
+            <ul>
+                <li>메뉴1</li>
+                <li>메뉴2</li>
+                <li>메뉴3</li>
+                <li>메뉴4</li>
+            </ul>
+        </aside>
+
+        <section class="col-6 col-s-9">
+            <h1>메뉴 1</h1>
+            <p>남는 희망의 창공에 만물은 설산에서 사막이다. 기쁘며, 대고, 굳세게 사막이다. 행복스럽고 이상은 과실이 모래뿐일 사랑의 남는 우리의 사막이다.</p>
+        </section>
+
+        <aside class="col-3 col-2-12">
+            <div class="right">
+                <h2>오른쪽</h2>
+                <p>별 별 풀이 이네들은 말 가을 계십니다. 피어나듯이 것은 봄이 별에도 듯합니다. 하나에 아이들의 것은 라이너 이국 불러 우는 아무 없이 계십니다.</p>
+
+                <h2>사이드바</h2>
+                <p>잠, 못 새겨지는 하나에 어머니, 밤을 오면 헤일 봅니다. 시와 묻힌 한 청춘이 어머니, 이름자 때 까닭이요, 파란 있습니다. 나의 북간도에 마리아 불러 하나의 이런 버리었습니다.</p>
+
+                <h2>내용</h2>
+                <p>이런 이름과, 별들을 별 겨울이 있습니다. 별을 북간도에 그러나 별빛이 언덕 아스라히 겨울이 봅니다. 이름과, 파란 한 언덕 부끄러운 위에도 하나에 나의 거외다. 경, 밤이 새워 오는 있습니다.</p>
+            </div>
+        </aside>
+    </main>
+    
+    <footer>
+        <p>웹 브라우저의 크기를 변경하면 사이트의 모양이 변경됨</p>
+    </footer>
+</body>
+</html>
