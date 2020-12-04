@@ -1,0 +1,25 @@
+* {box-sizing: border-box;}
+
+
+section {
+    display: flex;
+    flex-direction: row;
+}
+
+article {
+    flex: 25%;
+}
+
+article > img {
+    padding: 3px;
+    width: 100%
+}
+
+@media screen and (max-width : 768px){
+    section { flex-wrap: wrap; }
+    article { flex : 50%; }
+}
+
+@media screen and (max-width : 576px){
+    section {flex-direction: column;}
+}
